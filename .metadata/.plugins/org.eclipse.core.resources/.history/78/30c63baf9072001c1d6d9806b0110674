@@ -1,0 +1,19 @@
+package study.dao;
+
+import java.util.*;
+import study.MyRepository;
+import study.pojo.Planner;
+
+public class PlanDAO 
+{
+	MyRepository repo;
+	
+	public List<Planner> display() 
+	{
+			
+		List<Planner> list=repo.findAll();
+		return list;
+		
+	}
+
+}

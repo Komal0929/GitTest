@@ -1,0 +1,59 @@
+package study.pojo;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name="Planner_info_tbl")
+public class Planner 
+{
+	@Id
+	private int id;
+	private Date date;
+	private String task;
+	private String isDone;
+	
+	public Planner() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	public Planner(int id, Date date, String task, String isDone) {
+		super();
+		this.id = id;
+		this.date = date;
+		this.task = task;
+		this.isDone = isDone;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getTask() {
+		return task;
+	}
+	public void setTask(String task) {
+		this.task = task;
+	}
+	public String getIsDone() {
+		return isDone;
+	}
+	public void setIsDone(String isDone) {
+		this.isDone = isDone;
+	}
+	
+	
+	
+	
+	
+}

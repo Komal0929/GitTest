@@ -1,0 +1,37 @@
+package study.dao;
+
+import java.util.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import study.MyRepository;
+import study.pojo.Planner;
+
+@Repository
+public class PlanDAO 
+{
+	@Autowired
+	MyRepository repo;
+	
+	public List<Planner> display() 
+	{
+			
+		List<Planner> list=repo.findAll();
+		return list;
+		
+	}
+
+	public void update(int id, String is_done) 
+	{
+		Optional<Planner> list=repo.findById(id);
+		Planner obj=list.get();
+		obj.setIsDone("true");
+		
+		
+	}
+
+	
+	
+	
+}
